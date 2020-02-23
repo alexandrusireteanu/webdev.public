@@ -1,1 +1,2 @@
 # asma.public - Azi Student, Maine Antreprenor
+Programul Dezvoltarea şi promovarea site-urilor Web pentru antreprenori este un program complementar celui de dezvoltare antreprenorială, care oferă cunoştinţe/competenţe cu caracter tehnic necesare pentru a crea crea/dezvolta un site Web  menit să asigure prezenţa on-line şi să susţină anumite procese de afaceri (ex., vânzarea de produse) pentru o afacere de mici dimensiuni. 
