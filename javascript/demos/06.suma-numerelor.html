@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+	<title>JavaScript Suma Numerelor</title>
+	<script type="text/javascript">
+		function calcSum() 
+		{
+			valoare1 = parseInt(document.mainForm.textBox1.value);
+			valoare2 = parseInt(document.mainForm.textBox2.value);
+			sum = valoare1 + valoare2;
+			document.mainForm.textBoxSum.value = sum;
+		}
+	</script>
+</head>
+
+<body>
+	<form name="mainForm" action="" method="get">
+		<label for="textBox1">Valoare 1</label><input type="text" id="textBox1" name="textBox1" /> <br/>
+		<label for="textBox2>">Valoare 2</label><input type="text" id="textBox2" name="textBox2" /> <br/>
+		<input type="button" value="Calculeaza Suma" onClick="javascript: calcSum()" />
+		<br/>Suma = <input type="text" name="textBoxSum" readonly="readonly"/>
+	</form>
+</body>
+
+</html>
