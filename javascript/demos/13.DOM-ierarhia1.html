@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript">
+      function CitesteDiv(){
+        valDiv = document.getElementById("div_id").childNodes[0].nodeValue;
+        document.formular.text.value = valDiv;
+      }
+  </script>
+</head>
+<body>
+  <div id="div_id">Text in Div</div>
+  <form action="#" method="post" name="formular">
+    <textarea cols="30" rows="5" name="text" id="text"></textarea> <br />
+    <input type="button" value="Add" onclick="CitesteDiv();" />
+    <input type="submit" value="Send" />
+  </form>
+</body>
+
+</html>
