@@ -98,9 +98,6 @@
                 document.theform.reference[2].selected=true; 
                 -->
                 <form id="myform" name="theform" action="#" method="POST"> 
-                        <!-- Handling focus events - field selection events - onfocus (in),onblur (out) - Js at the bottom
-                        onchange - triggers when fields change 
-                        -->
                         <span id="namehint" class="hint"></span>    
 				<label for="name">Nume: </label>
                                 <input type="text" name="name" required placeholder="Nume mic, Nume familie" maxlength="20" value="" id="name" />  <!--  -->
@@ -122,13 +119,11 @@
                                  
                 <label for="zipcode">Cod postal: </label>
                 <input type="text" name="zipcode" pattern="[0-9]{6}" value="" id="zipcode" /> <!--  -->                 
-        <!-- myscript.js --> 
                 
                 <span id="formerror" class="error"></span>
                 <label for="phone">Telefon: </label>
                 <input type="text" name="phone" pattern="\d{4}\-\d{6}" placeholder="+xx-xxxx-xxxxxx" value="" id="phone" /> <!-- --> 
                         
-                        <!-- Handling onfocus, onchange events -->
                 <span id="formerror1" class="error"></span>
                 <label for="website">Site web: </label>
 				<input type="url" name="website" value="" id="website" /> <!-- -->
@@ -138,7 +133,7 @@
                 
                 <label for="date">Data: </label> 
                 <input type="date" name="date" min="2014-05-30" max="2015-05-29" value="" id="date" /><!-- -->
-                        <!-- onchange events handled differently, selectedIndex property  -->        
+                              
                 <label for="reference"> De unde ai aflat despre noi? </label>
                 <select name="reference" id="reference">
                     <option value="">Alege..</option>
