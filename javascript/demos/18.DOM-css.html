@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM CSS</title>
+</head>
+<body>
+  
+  <p id="p2">Salut!</p>
+  <script>
+  document.getElementById("p2").style.color = "blue";
+  </script>
+  <p>Paragraful de mai sus a fost schimbat cu un script.</p>
+
+  <h1 id="id1">Titlul 1</h1>
+  <input type="button" value="Schimba culoare titlu!" onclick="document.getElementById('id1').style.color = 'red'">
+  
+  <p id="p1"> Acesta este un text. Acesta este un text. Acesta este un text. Acesta este un text. </p>
+  <input type="button" value="Ascunde text" onclick="document.getElementById('p1').style.visibility='hidden'">
+  <input type="button" value="Arata text" onclick="document.getElementById('p1').style.visibility='visible'">
+
+</body>
+</html>
