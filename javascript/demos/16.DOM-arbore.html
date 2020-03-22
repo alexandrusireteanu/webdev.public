@@ -1,0 +1,70 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+  <title>Arborele DOM</title>
+</head>
+<body>
+  
+  <h1 id="intro">Prima mea pagina</h1>
+  <p id="demo">Salut!</p>
+  <script>
+    var myText = document.getElementById("intro").childNodes[0].nodeValue;
+    document.getElementById("demo").innerHTML = myText;
+  </script>
+
+  <h1 id="intro1">Prima mea pagina</h1>
+  <p id="demo1">Salut!</p>
+  <script>
+    myText = document.getElementById("intro1").firstChild.nodeValue;
+    document.getElementById("demo1").innerHTML = myText;
+  </script>
+
+  <p>Salut!</p>
+  <div>
+  <p>DOM-ul este foarte util!</p>
+  <p>Acest exemplu demonstreaza proprietatea <b>document.body</b>.</p>
+  </div>
+  <script>
+    alert(document.body.innerHTML);
+    //alert(document.documentElement.innerHTML);
+  </script>
+
+<ul id="myList"><li id="item1">Coffee (first li)</li><li id="item2">Tea (second li)</li></ul>
+<p>Click the button to get the HTML content of the next sibling of the first list item.</p>
+  <p>Lista cu exemple:</p>Cafea (primul li)</li><li id="item2">Ceai (al doilea li)</li></ul>
+  <p>Clic pe buton pentru a obtine continutul HTML al urmatoarului frate al primului articol de lista.</p>
+  <button onclick="myFunction()">Incearca</button>
+  <p><strong>Nota:</strong> Spatiul alb din interiorul elementelor este considerat text si textul este considerat nod.</p>
+  
+  <p>Daca adaugati spatiu alb intre cele doua elemente, rezultatul va fi "nedefinit".</p>
+  <p id="demo2"></p>
+  <script>
+  function myFunction() {
+      var x = document.getElementById("item1").nextSibling.innerHTML;
+      // var x = document.getElementById("item2").previousSibling.innerHTML; 
+      // var x = document.getElementById("myList").firstChild.innerHTML;
+      // var x = document.getElementById("myList").lastChild.innerHTML;
+      document.getElementById("demo2").innerHTML = x;
+  }
+  </script>
+
+  <!-- Exercitii
+  
+  <p id="demos">Utilizati DOM pentru a schimba textul</p>
+  <p class="text">Utilizati DOM pentru a schimba textul</p>
+  <p>Utilizati DOM pentru a schimba textul</p>
+  <p>Utilizati DOM pentru a schimba textul</p>
+  <script>
+    //document.getElementById('demos').innerHTML="Bine";
+    document.getElementsByTagName('p')[0].innerHTML="Bine";
+    document.getElementsByClassName('text')[0].innerHTML="Bine din nou";
+    document.querySelectorAll('p')[2].innerHTML="Bine";
+    var title=document.head.childNodes[1].innerText;
+    document.querySelectorAll('p')[3].innerHTML=title;
+  </script>
+  
+  -->
+
+</body>
+</html>
