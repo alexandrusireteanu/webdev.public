@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM Evenimente</title>
+</head>
+<body onload="checkCookies()">
+  
+  <!-- continutul elementului <h1> este modificat atunci cand un utilizator face clic pe el -->
+  <h1 onclick="this.innerHTML='Ups!'">Clic pe acest text!</h1>
+  
+  <!-- o functie este apelata de la managerul de evenimente -->
+  <h1 onclick="changeText(this)">Clic pe acest text!</h1>
+  <script>
+    function changeText(id) { 
+        id.innerHTML = "Ups!";
+    }
+  </script>
+  
+  <!-- pentru a atribui evenimente la elemente HTML putem utiliza atribute de evenimente -->
+  <p>Clic pe buton pentru a afisa data.</p>
+  <button onclick="displayDate()">Este ora?</button>
+  <script>
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+  </script>
+  <p id="demo"></p>
+  
+  <!-- alocati evenimente elementelor HTML folosind JavaScript -->
+  <p>Clic pe "Incercati" pentru a executa functia displayDate()</p>
+  <button id="myBtn">Incercati</button>
+  <p id="demo1"></p>
+  <script>
+    document.getElementById("myBtn").onclick = displayDate;
+    function displayDate() {
+        document.getElementById("demo1").innerHTML = Date();
+    }
+  </script>
+  
+  <!-- evenimentul 'onload' poate fi utilizat pentru a verifica tipul de browser al utilizatorului si versiunea browserului dar si pentru a incarca versiunea corecta a paginii web pe baza acestor informatii -->
+  <p id="demo2"></p>
+  <script>
+    function checkCookies() {
+        var text = "";
+        if (navigator.cookieEnabled == true) {
+            text = "Cookie-urile sunt activate.";
+        } else {
+            text = "Cookie-urile nu sunt activate.";
+        }
+        document.getElementById("demo2").innerHTML = text;
+    }
+  </script>
+  
+  <!-- evenimentul 'onchange' este adesea utilizat in combinatie cu validarea campurilor de intrare -->
+  <script>
+    function myFunction() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+  </script>  
+  Introdu numele tau: <input type="text" id="fname" onchange="myFunction()">
+  <p>Cand parasiti campul de introducere, se declanseaza o functie care transforma textul de intrare in majuscule.</p>
+  
+  <!-- Evenimentele onmouseover si onmouseout pot fi utilizate pentru a declansa o functie atunci cand utilizatorul plaseaza mouse-ul peste sau in afara unui element HTML -->
+  <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse peste element</div>
+  <script>
+    function mOver(obj) {
+        obj.innerHTML = "Multumesc"
+    }
+    function mOut(obj) {
+        obj.innerHTML = "Mouse peste element"
+    }
+  </script>
+
+  <!-- evenimentele onmousedown, onmouseup, si onclick sunt toate partile unui clic de mouse. In prima faza cand facem clic pe butonul mouse-ului, evenimentul onmousedown este declansat, apoi, atunci cand este eliberat butonul mouse-ului, evenimentul onmouseup este declansat si, in final, atunci cand facem clic pe mouse, evenimentul onclick este declansat. -->
+
+  <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;margin:15px">Clic</div>
+  <script>
+    function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Elibereaza-ma";
+    }
+    function mUp(obj) {
+        obj.style.backgroundColor="#D94A00";
+        obj.innerHTML = "Multumesc";
+    }
+  </script>
+  
+  <!-- evenimentul onclick sunt deseori utilizat in combinație cu validarea câmpurilor de intrare -->
+  <script>
+    function myFunctionS() {
+        var x = document.getElementById("fnames");
+        x.value = x.value.toUpperCase();
+        /*
+        x.value = x.value.substring(0,1).toUpperCase() + x.value.substring(1).toLowerCase(); */
+    
+    }
+  </script>
+  Enter your name: <input type="text" id="fnames" ><br /><br />
+  Send the name: <input type="submit" value="Send" onclick="myFunctionS()"/>
+  
+</body>
+</html>
