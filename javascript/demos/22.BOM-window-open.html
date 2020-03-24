@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deschidem o fereastra noua</title>
+	<script>
+		function openWindow(){
+			var newWindow = window.open("", "exempluFereastra", "width=400, height=100, menubar=yes, status=yes,resizable=no");
+			newWindow.document.write("<html><head><title>Titlu fereastra</title></head><body><h1>Sample Text</h1></body>");}
+	</script>
+</head>
+
+<body>
+  <input type="button" value="Deschide fereastra" onclick="openWindow();">
+</body>
+
+</html>
