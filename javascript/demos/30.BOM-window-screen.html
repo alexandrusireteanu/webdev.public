@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Obiectul ecran</title>
+    </head>
+<body>
+
+<!-- proprietatea screen.width returneaza latimea ecranului vizitatorului in pixeli -->
+<p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML = "Latimea ecranului este " + screen.width;
+    </script>
+
+<!-- proprietatea screen.height returneaza inaltimea ecranului vizitatorului in pixeli -->
+<p id="demo1"></p>
+    <script>
+    document.getElementById("demo1").innerHTML = "Inaltimea ecranului este " + screen.height;
+    </script>
+
+<!-- proprietatea screen.availWidth returneaza latimea ecranului vizitatorului, in pixeli, minus caracteristici de interfata precum Windows Taskbar -->
+<p id="demo3"></p>
+    <script>
+    document.getElementById("demo3").innerHTML = "Latimea ecranului vizitatorului este " + screen.availWidth;
+    </script>
+
+<!-- proprietatea screen.availHeight returneaza inaltimea ecranului vizitatorului, in pixeli, minus caracteristici de interfata precum Windows Taskbar -->
+<p id="demo4"></p>
+    <script>
+    document.getElementById("demo4").innerHTML = "Inaltimea ecranului vizitatorului este " + screen.availHeight;
+    </script>
+
+<!-- proprietatea screen.colorDepth returneaza numarul de biti utilizati pentru afisarea unei culori-->
+<p id="demo5"></p>
+    <script>
+    document.getElementById("demo5").innerHTML = "Numarul de biti utilizati pentru afisarea unei culori este " + screen.colorDepth;
+    </script>
+
+<!-- proprietatea screen.pixelDepth returneaza adancimea pixelilor ecranului -->
+<p id="demo6"></p>
+    <script>
+    document.getElementById("demo6").innerHTML = "Adancimea pixelilor ecranului este " + screen.pixelDepth;
+    </script>
+
+</body>
+</html>
