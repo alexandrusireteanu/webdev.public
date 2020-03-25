@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p>Deschide "myWindow"si muta noua fereastra in coltul din stanga sus al ecranului:</p>
+
+    <button onclick="openWin()">Deschide "myWindow"</button>
+    <button onclick="moveWin()">Muta "myWindow"</button>
+
+    <script>
+    var myWindow;
+
+    function openWin() {
+        myWindow=window.open("", "myWindow", "width=200, height=100");
+        myWindow.document.write("<p>Aceasta este 'myWindow'</p>");
+    }
+
+    function moveWin() {
+        myWindow.moveTo(500, 100);
+        myWindow.focus();
+    }
+    </script>
+
+</body>
+</html>
