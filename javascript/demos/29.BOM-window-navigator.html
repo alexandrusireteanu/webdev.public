@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Obiectul Navigator</title>
+    </head>
+<body>
+
+<!-- proprietatea cookieEnabled returneaza adevarat daca cookie-urile sunt activate, altfel false -->
+<button onclick="myFunction()">Clic</button>
+<p id="demo"></p>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Cookie-urile sunt activate " + navigator.cookieEnabled;
+        }
+    </script>
+
+<!-- proprietatile appName si appCodeName returneaza numele browserului -->
+<button onclick="myFunction1()">Clic</button>
+<p id="demo1"></p>
+    <script>
+        function myFunction1() {
+            document.getElementById("demo1").innerHTML = "Numele este " + navigator.appName + "<br>Numele codului este " + navigator.appCodeName;
+        }
+    </script>
+
+<!-- proprietatea product returneaza numele motorului browserului -->
+<button onclick="myFunction2()">Clic</button>
+<p id="demo2"></p>
+    <script>
+        function myFunction2() { 
+            document.getElementById("demo2").innerHTML = "Motorul browserului este " + navigator.product;
+        }
+    </script>
+
+<!-- proprietatea appVersion returneaza informatii despre versiunea despre browser -->
+<button onclick="myFunction3()">Clic</button>
+<p id="demo3"></p>
+    <script>
+        function myFunction3() {
+            document.getElementById("demo3").innerHTML = navigator.appVersion;
+        }
+    </script>
+
+<!-- proprietatea userAgent returneaza, de asemenea, informatii despre versiunea de browser -->
+<button onclick="myFunction4()">Clic</button>
+<p id="demo4"></p>
+    <script>
+        function myFunction4() {
+            document.getElementById("demo4").innerHTML = navigator.userAgent;
+        }
+    </script>
+
+<!-- proprietatea platform returneaza platforma browserului (sistemul de operare) -->
+<button onclick="myFunction5()">Clic</button>
+<p id="demo5"></p>
+    <script>
+        function myFunction5() { 
+            document.getElementById("demo5").innerHTML = navigator.platform;
+        }
+    </script>
+
+<!-- proprietatea language returneaza limba browserului -->
+<button onclick="myFunction6()">Clic</button>
+<p id="demo6"></p>
+    <script>
+        function myFunction6() {
+            document.getElementById("demo6").innerHTML = "Limba browserului este " + navigator.language;
+        }
+    </script>
+
+<!-- metoda javaEnabled() returneaza true daca Java este activat -->
+<button onclick="myFunction7()">Clic</button>
+<p id="demo7"></p>
+    <script>
+        function myFunction7() {
+            document.getElementById("demo7").innerHTML = "Java este activat " + navigator.javaEnabled();
+        }
+    </script>
+
+
+</body>
+</html>
