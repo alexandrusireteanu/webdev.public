@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Validarea formularelor</title>
+	<script language="JavaScript">
+		function checkForm() {
+			var errorMessages = "";
+			var valid = true;
+			if (document.mainForm.firstName.value == "") {
+				document.getElementById("firstNameError").style.display = "inline";
+				errorMessages += "Va rugam sa introduceti numele dvs.!<br/>";
+				valid = false;
+			} else {
+				document.getElementById("firstNameError").style.display = "none";
+			}
+			
+			if (document.mainForm.lastName.value == "") {
+				document.getElementById("lastNameError").style.display = "inline";
+				errorMessages += "Va rugam sa introduceti prenumele dvs.<br/>";
+				valid = false;
+			} else {
+				document.getElementById("lastNameError").style.display = "none";
+			}
+			
+			if (document.mainForm.email.value == "") {
+				document.getElementById("emailError").style.display = "inline";
+				errorMessages += "Va rugam sa introduceti e-mailul dvs.!<br/>";
+				valid = false;
+			} else {
+				document.getElementById("emailError").style.display = "none";
+			}
+			
+			if (document.mainForm.gender.value == "") {
+				document.getElementById("genderError").style.display = "inline";
+				errorMessages += "Va rugam sa selectati sexul!<br/>";
+				valid = false;
+			} else {
+				document.getElementById("genderError").style.display = "none";
+			}
+			
+			if (valid) {
+				document.getElementById("errorMessages").style.display = "none";
+			} else {			
+				document.getElementById("errorMessages").style.display = "inline";
+				document.getElementById("errorMessages").innerHTML = errorMessages;
+			}			
+			return valid;
+		}
+	</script>
+</head>
+
+<body>
+	<form name="mainForm" action="" method="post" onsubmit="return checkForm()">
+		Nume: <input type="text" name="firstName" />
+		<span id="firstNameError" style="color:red; display:none">* invalid!</span>
+		<br />
+		Prenume: <input type="text" name="lastName" />
+		<span id="lastNameError" style="color:red; display:none">* invalid!</span>
+		<br />
+		E-mail: <input type="text" name="email" />
+		<span id="emailError" style="color:red; display:none">* invalid!</span>
+		<br />
+		Sex: <select name=gender>
+			<option></option>
+			<option>Masculin</option>
+			<option>Feminin</option>
+		</select>
+		<span id="genderError" style="color:red; display:none">* invalid!</span>
+		<br />
+		<div id="errorMessages" style="color:red; display:none"></div><br />
+		<input type="submit" value="Verificati formularul si trimiteti">
+  </form>
+</body>
+
+</html>
