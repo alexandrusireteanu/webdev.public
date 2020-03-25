@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p>Deschide o fereastra si redimensioneza latimea si inaltimea la 500px:</p>
+
+    <button onclick="openWin()">Creaza fereastra</button>
+    <button onclick="resizeWin()">Redimensioneza fereastra</button>
+
+    <script>
+        var myWindow;
+
+        function openWin() {
+            myWindow = window.open("", "", "width=100, height=100");
+        }
+
+        function resizeWin() {
+            myWindow.resizeTo(250, 250);
+            myWindow.focus();
+        }
+    </script>
+
+</body>
+</html>
