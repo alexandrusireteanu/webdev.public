@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>JavaScript Math Object</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		
+		// Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments
+		document.write("<br />");
+		document.write(Math.min(0, 150, 30, 20, -8, -200));
+		document.write("<br />");
+		document.write(Math.max(0, 150, 30, 20, -8, -200));  
+		
+		// Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive)
+		document.write("<br />");
+		document.write(Math.random());
+		
+		// Math.round() rounds a number to the nearest integer
+		document.write("<br />");
+		document.write(Math.round(4.4));
+		
+		// Math.ceil() rounds a number up to the nearest integer
+		document.write("<br />");
+		document.write(Math.ceil(4.4));
+		
+		// Math.floor() rounds a number down to the nearest integer
+		document.write("<br />");
+		document.write(Math.floor(4.7));
+		
+		// Math.floor() and Math.random() can be used together to return a random number between 0 and 10
+		document.write("<br />");
+		document.write(Math.floor(Math.random() * 11));
+		
+		// 8 mathematical constants that can be accessed with the Math object
+		document.write("<br />");
+		document.write(Math.E);          // returns Euler's number
+		document.write("<br />");
+		document.write(Math.PI);         // returns PI
+		document.write("<br />");
+		document.write(Math.SQRT2);      // returns the square root of 2
+		document.write("<br />");
+		document.write(Math.SQRT1_2);    // returns the square root of 1/2
+		document.write("<br />");
+		document.write(Math.LN2);        // returns the natural logarithm of 2
+		document.write("<br />");
+		document.write(Math.LN10);       // returns the natural logarithm of 10
+		document.write("<br />");
+		document.write(Math.LOG2E);      // returns base 2 logarithm of E
+		document.write("<br />");
+		document.write(Math.LOG10E);     // returns base 10 logarithm of E
+		
+	</script>
+	
+	<br /><br />
+	
+	<!-- Display 20 random numbers between 1 and 10 in the format Random number (1) in range 1..10 -> 4 -->
+	
+	<script type="text/javascript">
+		for (i=1; i<=20; i++) {
+			var x = Math.random();
+			x = 10*x + 1;
+			x = Math.floor(x);
+			document.write("Random number (" + i + ") in range 1..10 --> " + x + "<br/>");
+		}
+	</script>
+	
+</body>
+
+</html>
