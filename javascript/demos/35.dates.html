@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Obiect Data JavaScript</title>
+</head>
+<body>
+	<p id="timeField"></p>
+	<script type="text/javascript">
+		var now = new Date();
+		var result = "Acum este " + now;
+		document.getElementById("timeField").innerText = result;
+	</script>
+	
+	<!-- new Date (7 numere), creeaza un nou obiect de tip data cu data si ora specificate: cele 7 numere specifica anul, luna, ziua, ora, minutul, secunda si milisecunda, in acea ordine -->
+	<p id="demo"></p>
+		<script>
+		var d = new Date(99,5,24,11,33,30,0);
+		document.getElementById("demo").innerHTML = d;
+	</script>
+
+	<!-- metoda toUTCString() converteste o data intr-un sir UTC (un standard de afisare a datelor) -->
+	<p id="demo1"></p>
+		<script>
+		var d = new Date();
+		document.getElementById("demo1").innerHTML = d.toUTCString();
+	</script>
+	
+	<!-- metoda toDateString() transforma o data intr-un format lizibil -->
+		<p id="demo2"></p>
+		<script>
+		var d = new Date();
+		document.getElementById("demo2").innerHTML = d.toDateString();
+	</script>
+
+</body>
+
+</html>
