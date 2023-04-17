@@ -1,0 +1,39 @@
+﻿body, img, div, section, article {
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width:100%;
+}
+
+body {
+    section {
+        article {
+            width: 60%;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 15px;
+            zoom: 1;
+
+            &:after {
+                display: block;
+                content: "";
+                height: 0;
+                clear: both;
+            }
+
+            header {
+                h1 {
+                }
+            }
+
+            .article-content {
+                img {
+                    float:left;
+                    width:500px;
+
+                }
+            }
+        }
+    }
+}

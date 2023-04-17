@@ -1,0 +1,125 @@
+body,
+div,
+a,
+h1,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #fff;
+  font-size: 16px;
+}
+@font-face {
+  font-family: 'Griffy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Griffy'), local('Griffy-Regular'), url(http://themes.googleusercontent.com/static/fonts/griffy/v1/f4FUXlL5FPqftKJ2T0mqXg.woff) format('woff');
+}
+body #wrapper {
+  width: 960px;
+  margin: 0 auto;
+  border: 1px solid black;
+  color: #000;
+}
+body #wrapper #header {
+  position: relative;
+  padding: 15px;
+  zoom: 1;
+}
+body #wrapper #header:after {
+  clear: both;
+  display: block;
+  height: 0;
+  content: " ";
+}
+body #wrapper #header h1 {
+  text-align: left;
+  font-family: 'Griffy';
+  border-bottom: 3px solid black;
+  padding-bottom: 15px;
+  font-size: 2.3em;
+}
+body #wrapper #header #nav {
+  float: right;
+  margin: 0 15px;
+  margin-top: -20px;
+  display: inline-block;
+}
+body #wrapper #header #nav ul {
+  list-style-type: none;
+}
+body #wrapper #header #nav ul li {
+  background-color: #fff;
+  display: inline-block;
+  font-size: 1.3em;
+  border: none;
+  margin: 0 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body #wrapper #header #nav ul li a {
+  padding: 5px 10px;
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+body #wrapper #header #nav ul li:hover {
+  background: #ccc;
+}
+@media only screen and (max-width: 960px) {
+  body #wrapper {
+    width: 99%;
+  }
+  body #wrapper #header h1 {
+    text-align: right;
+  }
+  body #wrapper #header #nav {
+    position: relative;
+    top: -10px;
+    float: none;
+    margin-top: 0;
+  }
+  body #wrapper #header #nav ul {
+    /*margin-top: -40px;*/
+    margin-right: 15px;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 640px) {
+  body #wrapper #header h1 {
+    border: none;
+  }
+  body #wrapper #header #nav {
+    width: 460px;
+  }
+  body #wrapper #header #nav ul {
+    position: static;
+    top: 0;
+    margin-top: 0;
+  }
+  body #wrapper #header #nav ul li {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body #wrapper #header h1 {
+    border: none;
+    text-align: center;
+    font-size: 2.5em;
+  }
+  body #wrapper #header #nav {
+    width: 99%;
+  }
+  body #wrapper #header #nav ul {
+    margin: 0 auto;
+    text-align: center;
+    width: 99%;
+  }
+  body #wrapper #header #nav ul li {
+    /*width: 99%;*/
+    display: block;
+    font-size: 1.7em;
+  }
+}

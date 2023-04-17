@@ -1,0 +1,887 @@
+<div class="nm_post nm_post_single">
+    <h1 class="nm_post_title">List of Bootstrap 3 CSS classes with description</h1>
+    <p class="nm_post_date">Published on 25.09.2014 - 23:02</p>
+    <div class="nm_post_image"><img src="http://tomasjanecek.cz/data/uploads/uvodniky/bootstrap-3-classes.jpg" alt="List of Bootstrap 3 CSS classes with description" title="List of Bootstrap 3 CSS classes with description" /></div>
+    <div class="nm_post_content"><p>Every web developer should know how to properly code a responsive website. <strong>Bootstrap 3</strong> is an ultimate <strong>framework </strong>that learns you how to think when coding responsive websites and makes their creation much easier and faster. When I was learning Bootstrap 3, I was looking for a <strong>simple list of basic Bootstrap 3 classes with description</strong> and there were none - only a few lists for Bootstrap 2, without any description, therefore pretty useless for my intentions. So I created this <strong>list of Bootstrap 3 CSS classes</strong> <strong>with </strong>so much desired <strong>description </strong>- I hope it's comprehensive. Keep in mind that it's not a documentation, it's just a quick hint to help you understand the meaning of each mentioned class.</p>
+
+<p>It is also not a complete list of classes, it would take days to create it and you don't really need to use (and know) all the BS3 classes. <a href="#sources">See the sources part in the bottom of this page</a> to find out the meaning of the classes that I don't mention here (button classes for example).</p>
+
+<hr>
+<h2>Basic Bootstrap Classes</h2>
+
+<h3>.container</h3>
+
+<ul>
+	<li>sets fixed width to an element (which changes depending on a screen size to other fixed values, so it's still responsive) on all screen sizes except xs - on xs, the width is calculated automatically (this behaviour can be changed)</li>
+	<li>a fixed width responsive website should be wrapped in .container (or just the content without menu, whatever - it's up to you)</li>
+	<li>.container can't be nested!</li>
+</ul>
+
+<h3>.container-fluid</h3>
+
+<ul>
+	<li>sets 100% width, margin-left and margin-right: auto, padding-left and padding-right: 15px</li>
+	<li>a full screen website should be wrapped in .container-fluid</li>
+	<li>.container-fluid can't be nested!</li>
+</ul>
+
+<h3>.row</h3>
+
+<ul>
+	<li>creates horizontal groups of columns (which usually have width classes, see below)</li>
+	<li>must be within .container to ensure correct padding and alignment</li>
+	<li>only columns (block elements with width classes) may be immediate children of rows</li>
+	<li>sets margin-left and margin-right: -15px</li>
+</ul>
+
+<h3>.pull-right</h3>
+
+<h3>.pull-left</h3>
+
+<ul>
+	<li>sets float to either left or right</li>
+</ul>
+
+<h3>.center-block</h3>
+
+<ul>
+	<li>sets margin-left and margin-right to auto</li>
+</ul>
+
+<h2>Bootstrap Grid Classes</h2>
+
+<ul>
+	<li>can be nested, the nested columns must be wrapped in .row as well</li>
+	<li>all columns have float: left and position: relative styles</li>
+</ul>
+
+<h3>.col-xs-1</h3>
+
+<h3>.col-xs-2</h3>
+
+<h3>.col-xs-3</h3>
+
+<h3>.col-xs-4</h3>
+
+<h3>.col-xs-5</h3>
+
+<h3>.col-xs-6</h3>
+
+<h3>.col-xs-7</h3>
+
+<h3>.col-xs-8</h3>
+
+<h3>.col-xs-9</h3>
+
+<h3>.col-xs-10</h3>
+
+<h3>.col-xs-11</h3>
+
+<h3>.col-xs-12</h3>
+
+<ul>
+	<li>sets width of a column (specified in %) on extra small screens (&lt;768pxt)</li>
+</ul>
+
+<h3>.col-sm-1</h3>
+
+<h3>.col-sm-2</h3>
+
+<h3>.col-sm-3</h3>
+
+<h3>.col-sm-4</h3>
+
+<h3>.col-sm-5</h3>
+
+<h3>.col-sm-6</h3>
+
+<h3>.col-sm-7</h3>
+
+<h3>.col-sm-8</h3>
+
+<h3>.col-sm-9</h3>
+
+<h3>.col-sm-10</h3>
+
+<h3>.col-sm-11</h3>
+
+<h3>.col-sm-12</h3>
+
+<ul>
+	<li>sets width of a column (specified in %) on small screens (≥768px)</li>
+</ul>
+
+<h3>.col-md-1</h3>
+
+<h3>.col-md-2</h3>
+
+<h3>.col-md-3</h3>
+
+<h3>.col-md-4</h3>
+
+<h3>.col-md-5</h3>
+
+<h3>.col-md-6</h3>
+
+<h3>.col-md-7</h3>
+
+<h3>.col-md-8</h3>
+
+<h3>.col-md-9</h3>
+
+<h3>.col-md-10</h3>
+
+<h3>.col-md-11</h3>
+
+<h3>.col-md-12</h3>
+
+<ul>
+	<li>sets width of a column (specified in %) on medium size screens (≥992px)</li>
+</ul>
+
+<h3>.col-lg-1</h3>
+
+<h3>.col-lg-2</h3>
+
+<h3>.col-lg-3</h3>
+
+<h3>.col-lg-4</h3>
+
+<h3>.col-lg-5</h3>
+
+<h3>.col-lg-6</h3>
+
+<h3>.col-lg-7</h3>
+
+<h3>.col-lg-8</h3>
+
+<h3>.col-lg-9</h3>
+
+<h3>.col-lg-10</h3>
+
+<h3>.col-lg-11</h3>
+
+<h3>.col-lg-12</h3>
+
+<ul>
+	<li>sets width of a column (specified in %) on large screens (≥1200px)</li>
+</ul>
+
+<h3>.col-xs-offset-* (.col-xs-offset-1, .col-xs-offset-2, .col-xs-offset-3 ... up to -12)</h3>
+
+<h3>.col-sm-offset-* (.col-sm-offset-1, .col-sm-offset-2, .col-sm-offset-3 ... up to -12)</h3>
+
+<h3>.col-md-offset-* (.col-md-offset-1, .col-md-offset-2, .col-md-offset-3 ... up to -12)</h3>
+
+<h3>.col-lg-offset-* (.col-lg-offset-1, .col-lg-offset-2, .col-lg-offset-3 ... up to -12)</h3>
+
+<ul>
+	<li>sets offset (margin-left) by specified number of columns (eg. set .col-sm-offset-3 class to a column to move it by three columns on small screens)</li>
+</ul>
+
+<h3>.col-xs-pull-* (.col-xs-pull-1, .col-xs-pull-2 ... up to -12)</h3>
+
+<h3>.col-sm-pull-* (.col-sm-pull-1, .col-sm-pull-2 ... up to -12)</h3>
+
+<h3>.col-md-pull-* (.col-md-pull-1, .col-md-pull-2 ... up to -12)</h3>
+
+<h3>.col-lg-pull-* (.col-lg-pull-1, .col-lg-pull-2 ... up to -12)</h3>
+
+<ul>
+	<li>sets left position in % as it is with columns (e.g. left: 75% with -pull-9)</li>
+</ul>
+
+<h3>.col-xs-push-* (.col-xs-push-1, .col-xs-push-2 ... up to -12)</h3>
+
+<h3>.col-sm-push-* (.col-sm-push-1, .col-sm-push-2 ... up to -12)</h3>
+
+<h3>.col-md-push-* (.col-md-push-1, .col-md-push-2 ... up to -12)</h3>
+
+<h3>.col-lg-push-* (.col-lg-push-1, .col-lg-push-2 ... up to -12)</h3>
+
+<ul>
+	<li>sets right position in % as it is with columns (e.g. right: 25% with -push-3)</li>
+</ul>
+
+<h2>Bootstrap Visibility Classes</h2>
+
+<ul>
+	<li>you can apply all as many of these classes on a single element as you wish and this mixing gives you even more possibilities for your layout</li>
+</ul>
+
+<h3>.clearfix</h3>
+
+<ul>
+	<li>obvious, clear: both</li>
+	<li>often combined with classes below</li>
+</ul>
+
+<h3>.visible-xs-block and .visible-xs</h3>
+
+<h3>.visible-sm-block and .visible-sm</h3>
+
+<h3>.visible-md-block and .visible-md</h3>
+
+<h3>.visible-lg-block and .visible-lg</h3>
+
+<ul>
+	<li>displays element (sets display: block property) only on screens with specified size and hides it (sets display: none) on screens of other sizes automatically</li>
+	<li>often combined with .clearfix so that clearfix is effective only on the selected screen size</li>
+</ul>
+
+<h3>.visible-xs-inline-block</h3>
+
+<h3>.visible-sm-inline-block</h3>
+
+<h3>.visible-md-inline-block</h3>
+
+<h3>&nbsp;</h3>
+
+<h3>.visible-lg-inline-block</h3>
+
+<ul>
+	<li>displays element (sets display: inline-block property) only on screens with specified size and hides it (sets display: none) on screens of other sizes automatically</li>
+</ul>
+
+<h3>.visible-xs-inline</h3>
+
+<h3>.visible-sm-inline</h3>
+
+<h3>.visible-md-inline</h3>
+
+<h3>.visible-lg-inline</h3>
+
+<ul>
+	<li>displays element (sets display: block property) only on screens with specified size and hides it (sets display: none) on screens of other sizes automatically</li>
+</ul>
+
+<h3>.hidden-xs</h3>
+
+<h3>.hidden-sm</h3>
+
+<h3>.hidden-md</h3>
+
+<h3>.hidden-lg</h3>
+
+<ul>
+	<li>hides element (sets display: none property) only on screens with specified size and hides it (sets display: none) on screens of other sizes automatically</li>
+</ul>
+
+<h3>.visible-print-block</h3>
+
+<ul>
+	<li>displays element (sets display: block) in print (pre)view</li>
+</ul>
+
+<h3>.visible-print-inline</h3>
+
+<ul>
+	<li>displays element (sets display: inline) in print (pre)view</li>
+</ul>
+
+<h3>.visible-print-inline-block</h3>
+
+<ul>
+	<li>displays element (sets display: inline-block) in print (pre)view</li>
+</ul>
+
+<h3>.hidden-print</h3>
+
+<ul>
+	<li>hides element (sets display: none) in print (pre)view</li>
+</ul>
+
+<h2>Bootstrap Typography Classes</h2>
+
+<ul>
+	<li>default font-size of &lt;body&gt; a &lt;p&gt; elements is 14px, line-height 1.428; &lt;p&gt; also has margin-bottom of half of its line-height (20px with 14px font), therefore 10px by default</li>
+	<li>all elements like b, big, code, em, i, mark, small, strong, sub, sup, ins, del, s, u, abbr, address and blockquote (and small and cite inside) are properly styled</li>
+	<li>vast majority of these classes are most often set to either paragraph, strong or em elements</li>
+</ul>
+
+<h3>.page-header</h3>
+
+<ul>
+	<li>class for a wrapping div of a heading</li>
+	<li>adds some margin, padding and border-bottom</li>
+</ul>
+
+<h3>.h1</h3>
+
+<h3>.h2</h3>
+
+<h3>.h3</h3>
+
+<h3>.h4</h3>
+
+<h3>.h5</h3>
+
+<h3>.h6</h3>
+
+<ul>
+	<li>makes an element look like heading of a chosen level</li>
+</ul>
+
+<h3>.lead</h3>
+
+<ul>
+	<li>for highlighting an element</li>
+	<li>sets element's font-size to 21px, font-weight: 300, line-height: 1.4 and margin-bottom: 20px</li>
+</ul>
+
+<h3>.text-left</h3>
+
+<h3>.text-center</h3>
+
+<h3>.text-right</h3>
+
+<h3>.text-justify</h3>
+
+<ul>
+	<li>aligns texts, usually paragraphs, with text-align CSS property</li>
+</ul>
+
+<h3>.text-nowrap</h3>
+
+<ul>
+	<li>keeps the whole text with this class on a single line, no wrapping occurs because of white-space: nowrap CSS property of this class</li>
+</ul>
+
+<h3>.text-lowercase</h3>
+
+<h3>.text-uppercase</h3>
+
+<h3>.text-capitalize</h3>
+
+<ul>
+	<li>sets text-transform CSS property to make all characters inside the element with this class lowercase, uppercase or capitalized</li>
+</ul>
+
+<h3>.text-muted</h3>
+
+<ul>
+	<li>makes text grey</li>
+</ul>
+
+<h3>.text-primary</h3>
+
+<ul>
+	<li>makes text blue</li>
+</ul>
+
+<h3>.text-success</h3>
+
+<ul>
+	<li>makes text green</li>
+</ul>
+
+<h3>.text-info</h3>
+
+<ul>
+	<li>makes text dark blue</li>
+</ul>
+
+<h3>.text-warning</h3>
+
+<ul>
+	<li>makes text dark yellow</li>
+</ul>
+
+<h3>.text-danger</h3>
+
+<ul>
+	<li>makes text red</li>
+</ul>
+
+<h2>Bootstrap Lists' Classes</h2>
+
+<h3>.list-unstyled</h3>
+
+<ul>
+	<li>removes list-style and margin-left on list items</li>
+	<li>doesn't apply for nested lists (if needed, the nested list has to have .list-unstyled class as well)</li>
+</ul>
+
+<h3>.list-inline</h3>
+
+<ul>
+	<li>places list items on a single line (with display: inline-block and padding)</li>
+</ul>
+
+<h3>.dl-horizontal</h3>
+
+<ul>
+	<li>class for a definition list (&lt;dl&gt;)</li>
+	<li>sets nice styles for &lt;dt&gt; and &lt;dd&gt; within the definition list (text align, font-weight)</li>
+</ul>
+
+<h3>.list-group</h3>
+
+<ul>
+	<li>class for the parent element (usually &lt;ul&gt;, but can be &lt;div&gt; as well) of list items</li>
+	<li>list items have to have .list-group-item class</li>
+</ul>
+
+<h3>.list-group-item</h3>
+
+<ul>
+	<li>class for .list-group children elements</li>
+	<li>for a nicer look of the list items</li>
+	<li>usually on &lt;li&gt;, but can be &lt;a&gt; as well</li>
+</ul>
+
+<h3>.list-group-item-heading</h3>
+
+<ul>
+	<li>for a heading within .list-group-item, often &lt;h4&gt; or similar low-level heading</li>
+</ul>
+
+<h3>.list-group-item-text</h3>
+
+<ul>
+	<li>for text within .list-group-item, often in the paragraph tag or just in a span</li>
+</ul>
+
+<h2>Bootstrap Tables' Classes</h2>
+
+<h3>.table</h3>
+
+<ul>
+	<li>for an ordinary table</li>
+	<li>table heading has only border-bottom and &lt;td&gt;s have only border-top</li>
+</ul>
+
+<h3>.table-striped</h3>
+
+<ul>
+	<li>every odd line will be darker for a nicer look (using :nth-child selector)</li>
+	<li>table heading &lt;th&gt; has only border-bottom and &lt;td&gt;s have only border-top</li>
+	<li>should be combined with .table class</li>
+</ul>
+
+<h3>.table-bordered</h3>
+
+<ul>
+	<li>table with borders all around</li>
+	<li>should be combined with .table class</li>
+</ul>
+
+<h3>.table-hover</h3>
+
+<ul>
+	<li>class for a table</li>
+	<li>adds hover/focus effect on the table's tbody rows</li>
+	<li>should be combined with .table class</li>
+</ul>
+
+<h3>.table-condensed</h3>
+
+<ul>
+	<li>should be combined with .table class</li>
+	<li>for an ordinary table with half cell padding, so rows are not that high</li>
+</ul>
+
+<h3>.table-responsive</h3>
+
+<ul>
+	<li>class for a wrapper (! mostly div) of a table to keep it responsive in the way that scrollbar appears on extra small devices</li>
+</ul>
+
+<h3>.active</h3>
+
+<h3>.success</h3>
+
+<h3>.info</h3>
+
+<h3>.warning</h3>
+
+<h3>.danger</h3>
+
+<ul>
+	<li>classes for either &lt;tr&gt; or just &lt;td&gt;</li>
+	<li>sets background color for all &lt;td&gt; in a table row (or just one &lt;td&gt;) to grey (active) / green (success) / blue (info) / yellow (warning) / red (danger)</li>
+</ul>
+
+<h2>Bootstrap Forms' Classes</h2>
+
+<ul>
+	<li>don't forget that even form elements can be in the Bootstrap grid, so don't be afraid to use .row inside a form and then col-*-* wrappers</li>
+</ul>
+
+<h3>.form-group</h3>
+
+<ul>
+	<li>when creating vertical forms, it's a class for its wrapper (mostly div) of each label and its input, adds some margin-bottom</li>
+</ul>
+
+<h3>.form-control</h3>
+
+<ul>
+	<li>for every form element (input, textarea...), gives it 100% width</li>
+	<li>to make it narrower, use a narrower wrapper (row and col-*-* divs)</li>
+</ul>
+
+<h3>.form-control-static</h3>
+
+<ul>
+	<li>for a paragraph that replaces a form element (input...)</li>
+</ul>
+
+<h3>.form-horizontal</h3>
+
+<ul>
+	<li>for horizontal forms where label is on the same line as input</li>
+	<li>you have to use column classes (like col-xs-10) for each label and its input (or whateveer it is)</li>
+	<li>still combined with .form-group wrapper and .form-control classes</li>
+</ul>
+
+<h3>.form-inline</h3>
+
+<ul>
+	<li>for a single line form (but still vertical on extra small screens)</li>
+	<li>often used with the placeholder attribute to not need labels</li>
+	<li>labels of inline forms should get .sr-only class to be positioned so that they can't be seen (but they won't get display: none or visibility: hidden property)</li>
+</ul>
+
+<h3>.input-lg</h3>
+
+<h3>.input-sm</h3>
+
+<ul>
+	<li>makes a form element like input or select either bigger or smaller than default</li>
+</ul>
+
+<h3>.input-group-lg</h3>
+
+<h3>.input-group-sm</h3>
+
+<ul>
+	<li>classes for .input-group (see further)</li>
+	<li>always used together with .input-group class</li>
+</ul>
+
+<h3>.input-group</h3>
+
+<ul>
+	<li>class for a wrapper of .input-group-addon or .input-group-btn</li>
+	<li>used instead of form-group when the classes above are used</li>
+</ul>
+
+<h3>.input-group-addon</h3>
+
+<ul>
+	<li>class for a span that serves as a wrapper for either .glyphicon or a radio/checkbox input</li>
+	<li>adds your choice (glyphicon...) on the inner edge of an input field with grey background</li>
+	<li>the span with this class can be either before or after input, depends where you want the icon to show (the left or right side of the input)</li>
+	<li>must be within .input-group</li>
+</ul>
+
+<h3>.input-group-btn</h3>
+
+<ul>
+	<li>class for a span that serves as a wrapper for a button that looks like it was within a form input</li>
+	<li>the span with this class can be either before or after input, depends where you want the button to show (left or right side of the input)</li>
+	<li>contains &lt;button&gt; (the button can also include .dropdown-toggle class, span with .caret class and data-toggle="dropdown" attribute for even more complicated buttons)</li>
+	<li>must be within .input-group</li>
+</ul>
+
+<h3>.caret</h3>
+
+<ul>
+	<li>class for an empty span that creates a dropdown arrow</li>
+</ul>
+
+<h3>.help-block</h3>
+
+<ul>
+	<li>class for a span that serves as a help text for users</li>
+	<li>has to be placed right after an input of a form</li>
+</ul>
+
+<h3>.has-success</h3>
+
+<h3>.has-warning</h3>
+
+<h3>.has-error</h3>
+
+<ul>
+	<li>classes for wrapping divs with .form-group class</li>
+	<li>colours the label, input and .help-block span inside to green/yellow/red</li>
+	<li>the label within the wrapper with one of these classes has to have .control-label class to be coloured as well</li>
+</ul>
+
+<h3>.has-feedback</h3>
+
+<ul>
+	<li>class for the wrapping divs with .form-group class when you also use glyphicon for the input within the wrapper</li>
+</ul>
+
+<p>To disable input, use disabled="disabled" or readonly="readonly",<br>
+	To disable whole fieldset, wrap form-groups to fieldset with disabled="disabled"</p>
+
+<h2>Bootstrap Image Classes</h2>
+
+<ul>
+	<li>images should have .img-responsive or .thumbnail to be responsive and be wrapped in a column wrapper (like col-xs-3...)</li>
+</ul>
+
+<h3>.img-rounded</h3>
+
+<ul>
+	<li>img class that provides little border-radius</li>
+</ul>
+
+<h3>.img-circle</h3>
+
+<ul>
+	<li>img class that provides 50% border-radius making the img circle shaped</li>
+</ul>
+
+<h3>.img-thumbnail</h3>
+
+<ul>
+	<li>img class that provides a 1px solid grey border, 4px padding, white background, display: inline-block property and fast CSS3 transition</li>
+</ul>
+
+<h3>.thumbnail</h3>
+
+<ul>
+	<li>class for a wrapping div (or &lt;a&gt; in case of gallery) of an image, adds some styles (border, padding, background, transition) and set's the image max-width: 100%, height: auto; display: block; and margin-left and margin-right: auto</li>
+</ul>
+
+<h3>.img-responsive</h3>
+
+<ul>
+	<li>img class that makes any image responsive (scaling to the parent element) as it has max-width: 100% and height: auto</li>
+	<li>may not work if placed in a floating element!</li>
+</ul>
+
+<h3>.caption</h3>
+
+<ul>
+	<li>class for a div inside .thumbnail element (a or div) that may include h3, p, a (also buttons) for a proper margin/padding</li>
+</ul>
+
+<h3>.media</h3>
+
+<ul>
+	<li>class for a div (or li, whatever) that may contain an image, a heading, some &lt;small&gt; text and paragraphs</li>
+	<li>ensures proper image margin/padding</li>
+	<li>heading inside should also have media-heading attribute and should be (together with paragraphs) wrapped in a .media-body wrapper</li>
+	<li>any image within should have .pull-left or .pull-right class to float</li>
+</ul>
+
+<h3>.media-list</h3>
+
+<ul>
+	<li>class for a list (ul, ol) that contains .media inside</li>
+	<li>ensures better margin/padding</li>
+</ul>
+
+<h3>.glyphicon</h3>
+
+<ul>
+	<li>base class for glyphicons (font-based icons), sets font, its styles and positioning</li>
+	<li>should be used on a span</li>
+</ul>
+
+<h3>.glyphicon-* (replace the star with any name of a <a href="http://getbootstrap.com/components/#glyphicons">glyphicon from this list</a>)</h3>
+
+<ul>
+	<li>sets picture via font and :before CSS3 selector with content of the font</li>
+	<li>must be used together with .glyphicon class to show proper image</li>
+	<li>should be used on a span</li>
+</ul>
+
+<h2>Bootstrap Embed Classes</h2>
+
+<h3>.embed-responsive</h3>
+
+<ul>
+	<li>general class for responsive embedding wrapper</li>
+</ul>
+
+<h3>.embed-responsive-4by3</h3>
+
+<h3>.embed-responsive-16by9</h3>
+
+<ul>
+	<li>specific class for the embed wrapper with ratio already set</li>
+	<li>used together with .embed-responsive class</li>
+</ul>
+
+<h3>.embed-responsive-item</h3>
+
+<ul>
+	<li>used on the iframe or whatever it is inside the wrapper</li>
+</ul>
+
+<h2>Bootstrap Navigation Classes</h2>
+
+<h3>.nav</h3>
+
+<ul>
+	<li>the basic class for every navigation structure (&lt;ul&gt;), removes any list-style, left padding and bottom margin</li>
+	<li>also sets display: block and position relative for its &lt;li&gt; children</li>
+	<li>must be set on every navigation</li>
+</ul>
+
+<h3>.active</h3>
+
+<ul>
+	<li>class for a list item (nav item, li) that makes it look active / current</li>
+</ul>
+
+<h3>.nav-tabs</h3>
+
+<ul>
+	<li>class for navigation structure that gives it a tab style (proper borders + float: left)</li>
+</ul>
+
+<h3>.nav-pills</h3>
+
+<ul>
+	<li>class for navigation structure that gives it a pills style (background on active nav item)</li>
+</ul>
+
+<h3>.nav-stacked</h3>
+
+<ul>
+	<li>makes vertical pills navigation</li>
+	<li>used together with .nav-pills (and .nav of course)</li>
+</ul>
+
+<h3>.dropdown</h3>
+
+<ul>
+	<li>class for an</li>
+	<li>nav item to make it dropdown</li>
+	<li>needs additional classes elsewhere to work (see below)</li>
+</ul>
+
+<h3>.dropdown-toggle</h3>
+
+<ul>
+	<li>class for an &lt;a&gt; which is within &lt;li class="dropdown"&gt; to make a dropdown menu</li>
+	<li>needs additional classes elsewhere to work (see below)</li>
+</ul>
+
+<h3>.dropdown-menu</h3>
+
+<ul>
+	<li>class for an &lt;ul&gt; which is within &lt;a class="dropdown-toggle"&gt; to make a dropdown menu</li>
+	<li>provides proper displaying and hiding</li>
+	<li>the most important dropdown menu class</li>
+	<li>needs .dropdown and .dropdown-toggle classes on parent elements (see above)</li>
+</ul>
+
+<h3>.nav-justified</h3>
+
+<ul>
+	<li>class for an &lt;ul&gt;, together with .nav-tabs or .nav-pills creates a navigation with centered text and links' parent elements of the same width</li>
+</ul>
+
+<h3>.disabled</h3>
+
+<ul>
+	<li>class for &lt;li&gt; in a navigation</li>
+	<li>disables the link inside VISUALLY and also adds a special mouse cursor, but the link remains active - you need to remove the href attribute of the &lt;a&gt; to completely disable the link</li>
+</ul>
+
+<h2>Bootstrap Navbar Classes</h2>
+
+<ul>
+	<li>the difference between nav and navbar classes is the fact that navbar can collapse the whole nav (the nav can't do it on its own)</li>
+</ul>
+
+<h3>.navbar</h3>
+
+<ul>
+	<li>basic class for a navigation wrapper (usually &lt;nav&gt;), sets border, bottom margin, min-height and position: relative</li>
+	<li>if it's not supposed to be fixed, can be placed anywhere in .container or .container-fluid</li>
+</ul>
+
+<h3>.navbar-default</h3>
+
+<ul>
+	<li>sets other basic styles for a navigation wrapper (background gradient and box-shadow) and also its items (including .active class on &lt;li&gt;s)</li>
+	<li>for dark colours, see .navbar-inverse below</li>
+</ul>
+
+<h3>.navbar-inverse</h3>
+
+<ul>
+	<li>variation of navbar-default but with dark colours</li>
+	<li>never use navbar-default and navbar-inverse on one element as it doesn't make any sense</li>
+</ul>
+
+<h3>.navbar-brand</h3>
+
+<ul>
+	<li>sets styles for special hyperlinks and other "simple text" in a menu (float: left, bigger font size, some padding, text-shadow...)</li>
+</ul>
+
+<h3>.navbar-fixed-top</h3>
+
+<h3>.navbar-fixed-bottom</h3>
+
+<ul>
+	<li>additional class to .navbar that makes the navigation fixed at the top (or bottom) of the page as you scroll</li>
+	<li>used together with .navbar and also .navbar default (just to keep the nice look)</li>
+	<li>you should add some top or bottom padding to your &lt;body&gt; to not let the navbar overflow your content</li>
+</ul>
+
+<h3>.navbar-static-top</h3>
+
+<ul>
+	<li>removes top, right and left border and also border-radius of your navigation</li>
+</ul>
+
+<h3>.breadcrumb</h3>
+
+<ul>
+	<li>class for &lt;ul&gt; that serves as breadcrumbs</li>
+	<li>gives breadcrumbs a cool look</li>
+</ul>
+
+<h3>.pagination</h3>
+
+<ul>
+	<li>class for &lt;ul&gt; that serves as pagination</li>
+	<li>properly styles &lt;li&gt; within this pagination also with .disabled and .active classes (keep in mind that .disabled doesn't remove link's functionality)</li>
+</ul>
+
+<h3>.pagination-lg</h3>
+
+<h3>.pagination-sm</h3>
+
+<ul>
+	<li>used on &lt;ul&gt; together with .pagination, makes pagination either bigger or smaller than default</li>
+</ul>
+
+<h3>.pager</h3>
+
+<ul>
+	<li>used on &lt;ul&gt;, styles "Previous" and "Next" links to look better with a grey border</li>
+	<li>its list items can have .previous, .next and also disabled classes for even better styling</li>
+</ul>
+
+<h3>.next</h3>
+
+<h3>.previous</h3>
+
+<ul>
+	<li>used on &lt;li&gt; within &lt;ul class="pager"&gt;, adds arrows to the links</li>
+</ul>
+
+<hr>
+<h2 id="sources">Other sources</h2>
+
+<p>When I was studying Bootstrap 3, I used three pretty nice sources that are definitely worth mentioning.</p>
+
+<ul>
+	<li><a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/">Tutorial Republic's Twitter Bootstrap Tutorial</a> - this might be the easiest way to learn Bootstrap 3. Offers the "Try this code" feature to play with the classes at each chapter to see how all classes behave. I went through the basic part and it's really great. There are few little flaws but nothing really serious (except missing .img-responsive class), I'd definitely recommend you this tutorial</li>
+	<li><a href="http://getbootstrap.com/css/">Bootstrap 3 CSS-part documentation</a> - probably the first source that you came across, the official BS3 documentation. If you learn fast and easily, this might be all you need to learn the basics of Bootstrap 3.</li>
+	<li><a href="http://getbootstrap.com/components/">Bootstrap 3 Components-part documentation</a> - the documentation for Bootstrap 3 Components which are an optional part of Bootstrap 3. Plenty of them are kinda important - navigation, buttons, also very useful but not necessary for your Bootstrap powered responsive website</li>
+</ul>
+    </div>
