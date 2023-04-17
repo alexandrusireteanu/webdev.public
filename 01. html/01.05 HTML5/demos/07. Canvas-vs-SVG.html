@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>SVG</title>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        var n = 100;
+        var date = new Date().getTime();
+        var divSVG = "<svg height='0'  xmlns='http://www.w3.org/2000/svg'><circle id='redcircle' cx='0' cy='0' r='0' fill='red' style='display:none;visibility:hidden;' /> </svg>";
+        for (var i = 0; i < n; i++) {
+            document.write(divSVG);
+        }
+        var svgTime = new Date().getTime() - date;
+        
+
+        date = new Date().getTime();
+        var divCanvas = "<canvas></canvas>";
+        for (var i = 0; i < n; i++) {
+            document.write(divCanvas);
+        }
+        
+        var canvasTime = new Date().getTime() - date;
+        alert("Canvas time: "+ canvasTime +"\n" + "SVG time: "+svgTime); 
+    </script>
+</head>
+<body>
+    <h2>
+        HTML5 SVG Circle</h2>
+    <div id="main">
+    </div>
+</body>
+</html> 

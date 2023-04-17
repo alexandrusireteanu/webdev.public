@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Javascript Change Background Color Style</title>
+</head>
+<body>
+	<div id="DivToChange" style="width:150;height:100;background:#000000"> Some text to be highlighted with different colors</div>
+	<form width="500">
+		<input id="RedSlider" type="range" min="0" max="255" value="0" onchange="ChangeColor(this,GreenSlider,BlueSlider)"> Red <div id="redDiv">0</div> <br/>
+		<input id="GreenSlider" type="range" min="0" max="255" value="0" onchange="ChangeColor(RedSlider,this,BlueSlider)"> Green<div id="greenDiv">0</div> <br/>
+		<input id="BlueSlider" type="range" min="0" max="255" value="0" onchange="ChangeColor(RedSlider,GreenSlider,this)"> Blue <div id="blueDiv">0</div><br/>
+	</form>
+	
+	<script language="javascript" type="text/javascript" >
+		function ChangeColor(redObject,greenObject,blueObject){
+			var redSlider=redObject.value;
+			var blueSlider=blueObject.value;
+			var greenSlider=greenObject.value;
+		var redValue=parseInt(redSlider);
+		if(redValue<16)	{
+			redValue="0" + redValue.toString(16).toUpperCase();
+		}
+		else {		
+			redValue=redValue.toString(16).toUpperCase();
+		}
+		
+		var greenValue=parseInt(greenSlider);
+		if(greenValue<16)	{
+			greenValue="0" + greenValue.toString(16).toUpperCase();
+		}
+		else {		
+			greenValue=greenValue.toString(16).toUpperCase();
+		}
+		var blueValue=parseInt(blueSlider);
+		if(blueValue<16)	{
+			blueValue="0" + blueValue.toString(16).toUpperCase();
+		}
+		else {		
+			blueValue=blueValue.toString(16).toUpperCase();
+		}
+		
+		document.getElementById('DivToChange').style.backgroundColor="#"+redValue+greenValue+blueValue;
+		document.getElementById('redDiv').innerHTML=redValue;
+		document.getElementById('greenDiv').innerHTML=greenValue;
+		document.getElementById('blueDiv').innerHTML=blueValue;
+		}
+    </script>
+
+</body>
+</html>

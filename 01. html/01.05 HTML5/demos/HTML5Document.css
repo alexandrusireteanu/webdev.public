@@ -1,0 +1,70 @@
+body {
+ width: 99%;
+ margin: 2px auto;
+ font-family: Arial, "MS Trebuchet", sans-serif;
+ text-align: center;
+}
+header, footer, section, aside, nav, article { display: block; }
+
+header#page_header {
+ width: 100%;
+ margin: 4px auto;
+ border: 2px solid blue;
+}
+header#page_header nav ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+#page_header nav ul li {
+ display:inline;
+ margin: 0 20px 0 0;
+ padding: 1px;
+}
+section#posts {
+ float: right;
+ width: 79%;
+ background-color: #f1f2fe;
+ border: 1px solid yellow;
+}
+section#posts header#posts_header {
+ background-color: #abcdef;
+ border: 1px solid green;
+}
+article.post {
+ margin:10px;
+ background-color: yellow;
+ text-align: left;
+}
+article.post aside {
+ float: right;
+ margin-top: -58px;
+ width: 250px;
+ height: 120px;
+ background-color: #fefefe;
+}
+article.post p { clear: right;}
+section#sidebar {
+ float: left;
+ width: 18%;
+ background-color: #d7d8fe;
+ border: 1px solid green;
+ padding:5px;
+}
+section#sidebar nav ul {
+ margin: 3px auto;
+ text-align: left;
+ padding: 0 0 0 15;
+}
+section#sidebar aside {
+ width: 160px;
+ height: 250px;
+ margin: 10px auto;
+ background-color: #fefefe;
+}
+footer#page_footer {
+ clear: both;
+ width: 100%;
+ margin: 4px auto;
+ border: 2px solid blue;
+}
