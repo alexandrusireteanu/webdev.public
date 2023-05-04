@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Window History JavaScript Example</title>
+</head>
+<body>
+
+<!-- history.back() method loads the previous URL in the history list -->
+<script>
+function goBack() {
+    window.history.back()
+    // history back -2 ???
+}
+</script>
+<input type="button" value="Back" onclick="goBack()">
+
+<!-- history forward() method loads the next URL in the history list -->
+<script>
+function goForward() {
+    window.history.forward()
+}
+</script>
+<input type="button" value="Forward" onclick="goForward()">
+
+</body>
+</html>

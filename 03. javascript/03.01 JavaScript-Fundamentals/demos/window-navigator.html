@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Navigator JavaScript Example</title>
+    </head>
+<body>
+
+<!-- property cookieEnabled returns true if cookies are enabled, otherwise false -->
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Cookies enabled is " + navigator.cookieEnabled;
+}
+</script>
+
+<!-- properties appName and appCodeName return the name of the browser -->
+<button onclick="myFunction1()">Try it</button>
+<p id="demo1"></p>
+<script>
+function myFunction1() {
+    document.getElementById("demo1").innerHTML = "Name is " + navigator.appName + "<br>Code name is " + navigator.appCodeName;
+}
+</script>
+
+<!-- property product returns the engine name of the browser -->
+<button onclick="myFunction2()">Try it</button>
+<p id="demo2"></p>
+<script>
+function myFunction2() { 
+    document.getElementById("demo2").innerHTML = "Browser engine is " + navigator.product;
+}
+</script>
+
+<!-- property appVersion returns version information about the browser -->
+<button onclick="myFunction3()">Try it</button>
+<p id="demo3"></p>
+<script>
+function myFunction3() {
+    document.getElementById("demo3").innerHTML = navigator.appVersion;
+}
+</script>
+
+<!-- property userAgent also returns version information about the browser -->
+<button onclick="myFunction4()">Try it</button>
+<p id="demo4"></p>
+<script>
+function myFunction4() {
+    document.getElementById("demo4").innerHTML = navigator.userAgent;
+}
+</script>
+
+<!-- property platform returns the browser platform (operating system) -->
+<button onclick="myFunction5()">Try it</button>
+<p id="demo5"></p>
+<script>
+function myFunction5() { 
+    document.getElementById("demo5").innerHTML = navigator.platform;
+}
+</script>
+
+<!-- property language returns the browser's language -->
+<button onclick="myFunction6()">Try it</button>
+<p id="demo6"></p>
+<script>
+function myFunction6() {
+    document.getElementById("demo6").innerHTML = "Browser language is " + navigator.language;
+}
+</script>
+
+<!-- method javaEnabled() returns true if Java is enabled -->
+<button onclick="myFunction7()">Try it</button>
+<p id="demo7"></p>
+<script>
+function myFunction7() {
+    document.getElementById("demo7").innerHTML = "Java enabled is " + navigator.javaEnabled();
+}
+</script>
+
+
+</body>
+</html>

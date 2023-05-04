@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	<title>DOM Contact Form</title>
+	<style type="text/css">
+
+	    /* Generic Form Styles */
+
+	    #container {
+			width: 464px;
+			margin: auto;
+			text-align: left;
+			background: #f7f5f4;
+	    }
+	    form {
+			width: 464px;
+			overflow: hidden;
+		}
+		
+		label {
+			display: block;
+			font-size: 11px;
+			color: #645a56;
+			text-transform: uppercase;
+		}
+		
+		input[type=text], input[type=email], input[type=url], input[type=number], input[type=file], input[type=date], input[type=checkbox], select, textarea {
+			width: 452px;
+			height: 27px;
+			border: 1px solid #c3c5bf;
+			color: #645a56;
+			font-size: 17px;
+			padding: 7px 0 0 10px;
+			margin-bottom: 14px;
+			font-family: helvetica, arial;
+		}
+		
+		input[type=text]:hover, input[type=date]:hover, input[type=email]:hover, input[type=url]:hover, input[type=number]:hover,input[type=file]:hover, input[type=radio]:hover, textarea:hover, input:focus, textarea:focus {
+			background: #eeecec;
+			outline: none;
+		}
+		
+		textarea {
+			height: 212px;
+		}
+		
+		input[type=submit] {
+			background: #d5ceca url(submitButtonBG.jpg) no-repeat;
+			width: 102px;
+			height: 34px;
+			padding: 8px;
+			text-align: center;
+			font-size: 11px;
+			text-transform: uppercase;
+			float: right;
+			cursor: pointer;
+			border: none;
+			margin-top: 15px;
+			color: #30241f;
+			line-height: 20px;
+		}
+		
+		input[type=submit]:hover {
+			background: #bcb4ae;
+		}
+		
+		/* JavaScript Validation Styles */
+                
+        .hint {
+        	font-weight: normal;
+        	color: #2076c8;
+        	margin-left: 10px;
+        }
+        
+        .error {
+        	font-weight: normal;
+        	color: #cf1925;
+        	margin-left: 10px;
+        }
+	</style>
+</head>
+<body>
+  
+  <div id="container">
+  
+		<!-- Javascript accessing forms - methods and properties, getElementById() or name (Inspect Element-Console in Chrome)
+                window.document.forms[]
+                window.document.forms[0]
+                document.getElementById("myform")
+                document.getElementById("name")
+                document.getElementById("myform").getElementsByTagName("input")
+                document.getElementById("myform").getElementsByTagName("input")[0]
+                document.forms.myform
+                document.forms.myform.name
+                document.theform
+                document.theform.name
+                document.theform.requesttype
+                document.theform.requesttype[0]
+                document.theform.requesttype[1]
+                document.theform.reference
+                document.theform.reference[0]
+                document.theform.reference[1]
+                document.theform.name.type
+                document.theform.name.name
+                document.theform.name.type="radio"
+                document.theform.name.type="text"
+                document.theform.name.value="John"
+                document.theform.subscribe.checked=false
+                document.theform.reference[2].selected=true
+validate with JavaScript - compatible with older browsers, provides feedback during form input, more helpful   
+                -->
+                <form id="myform" name="theform" action="#" method="POST"> 
+                        <!-- Handling focus events - field selection events - onfocus (in),onblur (out) - Js at the bottom
+                        onchange - triggers when fields change 
+                        -->
+                        <span id="namehint" class="hint"></span>    
+				<label for="name">Name: </label>
+                                <input type="text" name="name" required placeholder="Last, First" maxlength="20" value="" id="name" />  <!--  -->
+				
+				<label for="email">Email: </label>
+                                <input type="email" name="email" multiple value="" id="email" /> <!-- -->
+				                              
+                <label for="age">Age: </label>
+                <input type="number" name="age" min="13" max="60" value="" id="age" /> <!--  -->         
+                
+                <label for="country">Country: </label>
+                <input type="text" name="country" value="" id="country" list="countries" pattern="[A-Za-z]+" />
+                    <datalist id="countries">
+                        <option value="Romania">
+                        <option value="Bulgaria">
+                        <option value="Hungary">
+                        <option value="Austria">                                 
+                    </datalist> <!--  -->
+                                 
+                <label for="zipcode">Zip Code: </label>
+                <input type="text" name="zipcode" pattern="[0-9]{6}" value="" id="zipcode" /> <!--  -->                 
+        <!-- myscript.js --> 
+                
+                <span id="formerror" class="error"></span>
+                <label for="phone">Phone: </label>
+                <input type="text" name="phone" pattern="\d{4}\-\d{6}" placeholder="+xx-xxxx-xxxxxx" value="" id="phone" /> <!-- --> 
+                        
+                        <!-- Handling onfocus, onchange events -->
+                <span id="formerror1" class="error"></span>
+                <label for="website">Website: </label>
+				<input type="url" name="website" value="" id="website" /> <!-- -->
+                                
+                <label for="image">Your Photo: </label>
+                <input type="file" name="image" multiple accept="image/png, video/*" id="image" /> <!--  -->
+                
+                <label for="date">Date: </label> 
+                <input type="date" name="date" min="2014-05-30" max="2015-05-29" value="" id="date" /><!-- -->
+                        <!-- onchange events handled differently, selectedIndex property  -->        
+                <label for="reference">Where did you hear about us? </label>
+                <select name="reference" id="reference">
+                    <option value="">Choose...</option>
+                    <option value="http://www.uaic.ro">A friend</option>
+                    <option value="http://www.facebook.com">Facebook</option>
+                    <option value="http://www.twitter.com">Twitter</option>
+                </select>
+				
+				<label for="subscribe">Subscribe to our mailing list?</label>
+                <input type="checkbox" id="subscribe" name="subscribe" CHECKED value="yes" />
+                
+                <label for="requesttype">Request Type: </label> 
+                <input type="radio" name="requesttype" value="question" id="questionitem" />Question
+                <input type="radio" name="requesttype" value="comment" id="commentitem" />Comment
+                                
+				<label for="message">Message: </label>
+				<textarea name="message" id="message" rows="20" cols="452"></textarea>			      
+                        <!--  -->
+                <input type="submit" name="submit" value="Submit" />
+                                
+                        <!--   -->
+			</form>
+                <script>
+                    document.theform.name.onfocus=function(){ 
+                        document.getElementById('namehint').innerHTML = "(Enter last name, then first)";
+                    }
+                    document.theform.name.onblur=function(){ 
+                        document.getElementById('namehint').innerHTML = "";
+                    } //onfocus
+                </script>
+                
+                <script>
+                    document.theform.website.onblur=function(){ 
+                        if (document.theform.website.value ==="") {
+                            document.getElementById('formerror1').innerHTML = "The URL field is required";
+                        } // url empty
+                        
+                        if (document.theform.website.value ==="http://") {
+                            document.getElementById('formerror1').innerHTML = "Please add a valid URL";
+                        } // url empty
+                    } // onblur
+             
+                    document.theform.website.onchange=function(){ 
+                        var theURL= document.theform.website.value;
+                        
+                        if (theURL.indexOf("http://")) {
+                             document.getElementById('formerror1').innerHTML = "URLs must begin with http://";
+                        } // doesn't have http
+                    } // onchange
+                </script>
+		
+                <script>
+                    document.theform.reference.onchange=function(){ 
+                        var id = document.theform.reference.selectedIndex;
+                        var url = document.theform.reference[id].value;
+                        // window.location.href = url;
+                        
+                        if (url !='' && window.confirm('Really go to another page?'))
+                            {
+                                document.location.href=url;
+                                // window.open(url); //open in a new window
+                            }
+                            else
+                            {
+                                document.location;
+                            }
+
+                    } //onfocus
+                </script>
+                
+                <script src="myscript.js">
+                    
+                </script>
+  
+  </div> <!-- end container-->
+     
+</body>
+</html>	

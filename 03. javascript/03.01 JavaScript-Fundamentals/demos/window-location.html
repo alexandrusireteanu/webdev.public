@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Location with JavaScript Example</title>
+    </head>
+<body>
+
+<!-- window.location.href property returns the URL of the current page. -->
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = "Page location is: " + window.location.href;
+</script>
+
+<!-- window.location.hostname property returns the name of the internet host (of the current page) -->
+<p id="demo1"></p>
+<script>
+document.getElementById("demo1").innerHTML = "Page hostname is: " + window.location.hostname;
+</script>
+
+<!-- window.location.pathname property returns the pathname of the current page -->
+<p id="demo2"></p>
+<script>
+document.getElementById("demo2").innerHTML ="Page path is: " + window.location.pathname;
+</script>
+
+<!-- window.location.protocol property returns the web protocol of the page -->
+<p id="demo3"></p>
+<script>
+document.getElementById("demo3").innerHTML = "Page protocol is: " + window.location.protocol;
+</script>
+
+<!-- window.location.assign() method loads a new document -->
+<script>
+function newDoc() {
+    window.location.assign("http://www.uaic.ro")
+}
+</script>
+<input type="button" value="Load new document" onclick="newDoc()">
+
+
+
+</body>
+</html>

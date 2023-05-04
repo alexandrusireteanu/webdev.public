@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM Events</title>
+</head>
+<body onload="checkCookies()">
+  
+  <!-- the content of the <h1> element is changed when a user clicks on it -->
+  <h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+  
+  <!-- a function is called from the event handler -->
+  <h1 onclick="changeText(this)">Click on this text!</h1>
+  <script>
+  function changeText(id) { 
+      id.innerHTML = "Ooops!";
+  }
+  </script>
+  
+  <!-- to assign events to HTML elements you can use event attributes -->
+  <p>Click the button to display the date.</p>
+  <button onclick="displayDate()">The time is?</button>
+  <script>
+  function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+  }
+  </script>
+  <p id="demo"></p>
+  
+  <!-- assign events to HTML elements using JavaScript -->
+  <p>Click "Try it" to execute the displayDate() function.</p>
+  <button id="myBtn">Try it</button>
+  <p id="demo1"></p>
+  <script>
+  document.getElementById("myBtn").onclick = displayDate;
+  function displayDate() {
+      document.getElementById("demo1").innerHTML = Date();
+  }
+  </script>
+  
+  <!-- onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information -->
+  <p id="demo2"></p>
+  <script>
+  function checkCookies() {
+      var text = "";
+      if (navigator.cookieEnabled == true) {
+          text = "Cookies are enabled.";
+      } else {
+          text = "Cookies are not enabled.";
+      }
+      document.getElementById("demo2").innerHTML = text;
+  }
+  </script>
+  
+  <!-- onchange event are often used in combination with validation of input fields -->
+  <script>
+  function myFunction() {
+      var x = document.getElementById("fname");
+      x.value = x.value.toUpperCase();
+  }
+  </script>
+  Enter your name: <input type="text" id="fname" onchange="myFunction()">
+  <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+  
+  <!-- onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an HTML element -->
+  <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me</div>
+  <script>
+  function mOver(obj) {
+      obj.innerHTML = "Thank You"
+  }
+  function mOut(obj) {
+      obj.innerHTML = "Mouse Over Me"
+  }
+  </script>
+
+  <!-- onmousedown, onmouseup, and onclick events are all parts of a mouse-click. First when a mouse-button is clicked, the onmousedown event is triggered, then, when the mouse-button is released, the onmouseup event is triggered, finally, when the mouse-click is completed, the onclick event is triggered -->
+  <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;margin:15px">Click Me</div>
+  <script>
+  function mDown(obj) {
+      obj.style.backgroundColor = "#1ec5e5";
+      obj.innerHTML = "Release Me";
+  }
+  function mUp(obj) {
+      obj.style.backgroundColor="#D94A00";
+      obj.innerHTML="Thank You";
+  }
+  </script>
+  
+  <!-- onclick event are often used in combination with validation of input fields -->
+  <script>
+  function myFunctionS() {
+      var x = document.getElementById("fnames");
+      x.value = x.value.toUpperCase();
+    /*
+    x.value = x.value.substring(0,1).toUpperCase() + x.value.substring(1).toLowerCase(); */
+  
+  }
+  </script>
+  Enter your name: <input type="text" id="fnames" ><br /><br />
+  Send the name: <input type="submit" value="Send" onclick="myFunctionS()"/>
+  
+  
+  
+</body>
+</html>

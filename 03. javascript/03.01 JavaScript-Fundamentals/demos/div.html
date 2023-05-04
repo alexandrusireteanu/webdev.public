@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title> </title>
+        <style type="text/css">
+            body {
+                font:normal 12px Verdana;
+            }
+            #divEl {
+                position:absolute;
+                left:0px;
+                top:100px;
+                width:80px;
+                background:#88bbff;
+                border:1px solid #001122;
+                padding:10px;
+            }
+        </style>
+        <script type="text/javascript">
+            
+            function init() {
+                divA=document.getElementById('divEl');
+                divA.style.left='700px';
+                divA.style.top='300px';
+                divMove();
+                
+                
+                
+            }
+            function divMove(){
+                divA.style.left=parseInt(divA.style.left)-30 +'px';
+                divA.style.top=parseInt(divA.style.top)-30 +'px';
+                setTimeout(divMove, 500);
+               if(divA.style.top <= '0px'){
+                   
+                    divleft();
+               }
+            }
+            function divleft(){
+                divA.style.left=parseInt(divA.style.left)-30 +'px';
+                divA.style.top=parseInt(divA.style.top)+30 +'px';
+                setTimeout(divleft, 500);
+                if(divA.style.left <= '0px'){
+                    init();
+                }
+            }
+        
+            window.onload = init;
+            
+            
+            
+        </script>
+        
+    </head>
+    
+    <body>
+        <div id="divEl">
+            Div element
+        </div>
+    </body>
+</html>

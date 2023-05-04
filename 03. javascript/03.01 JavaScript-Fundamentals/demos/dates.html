@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>JavaScript Date Object</title>
+</head>
+<body>
+	<p id="timeField"></p>
+	<script type="text/javascript">
+		var now = new Date();
+		var result = "It is now " + now;
+		document.getElementById("timeField").innerText = result;
+	</script>
+	
+	<!-- new Date(7 numbers), creates a new date object with the specified date and time: the 7 numbers specify the year, month, day, hour, minute, second, and millisecond, in that order -->
+	<p id="demo"></p>
+	<script>
+	var d = new Date(99,5,24,11,33,30,0);
+	document.getElementById("demo").innerHTML = d;
+	</script>
+
+	<!-- toUTCString() method converts a date to a UTC string (a date display standard) -->
+	<p id="demo1"></p>
+	<script>
+	var d = new Date();
+	document.getElementById("demo1").innerHTML = d.toUTCString();
+	</script>
+	
+	<!-- toDateString() method converts a date to a more readable format -->
+	<p id="demo2"></p>
+	<script>
+	var d = new Date();
+	document.getElementById("demo2").innerHTML = d.toDateString();
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>Form Validation with JavaScript - 2. Different types of FORM elements </title>
+	<!-- complete with Text/Textarea/Password boxes and Select/Combo/Drop-down boxes -->
+	<script language="JavaScript">
+		function checkForm(form)
+		  {
+		    if(form.checkboxfield.checked) {
+		      alert("The checkbox IS checked");
+		    } else {
+		      alert("The checkbox IS NOT checked");
+	    	}
+		    //return false;
+		    
+	    function checkRadio(field)
+			{
+			  for(var i=0; i < field.length; i++) {
+			    if(field[i].checked) return field[i].value;
+			  }
+			  return false;
+			}
+				
+		if(radioValue = checkRadio(form.radiofield)) {
+		      alert("You selected " + radioValue);
+		      //return true;
+		    } else {
+		      alert("Error: No value was selected!");
+		      //return false;
+		  }
+		 
+		 function checkArray(form, arrayName)
+			{
+			  var retval = new Array();
+			  for(var i=0; i < form.elements.length; i++) {
+			    var el = form.elements[i];
+			    if(el.type == "checkbox" && el.name == arrayName && el.checked) {
+			      retval.push(el.value);
+			    }
+			  }
+			  return retval;
+			}
+			
+			var itemsChecked = checkArray(form, "pref[]");
+		    alert("You selected " + itemsChecked.length + " items");
+		    if(itemsChecked.length > 0) {
+		      alert("The items selected were :\n\t" + itemsChecked);
+		    }
+		    return false;
+		  
+		 return true;
+		 }
+	</script>
+</head>
+
+<body>
+	<form method="POST" action="#" onsubmit="return checkForm(this);">
+		<fieldset>
+			<legend>checkbox</legend>
+		<span><label><input type="checkbox" name="checkboxfield"> Check me!</label></span>
+		</fieldset>
+		
+		<fieldset>
+			<legend>radio array</legend>
+			<span><label><input type="radio" name="radiofield" value="Red"> <b style="color: red;">Red</b></label>
+			<label><input type="radio" name="radiofield" value="Green"> <b style="color: green;">Green</b></label>
+			<label><input type="radio" name="radiofield" value="Blue"> <b style="color: blue;">Blue</b></label></span>
+		</fieldset>
+		
+		<fieldset>
+			<legend>checkbox array</legend>
+			<p>Which of the following pastimes do you enjoy?</p>
+			<span>
+			<label><input type="checkbox" name="pref[]" value="Art /Antiques"> Art /Antiques</label><br>
+			<label><input type="checkbox" name="pref[]" value="Camping/Hiking"> Camping/Hiking</label><br>
+			<label><input type="checkbox" name="pref[]" value="Cooking"> Cooking</label><br>
+			<label><input type="checkbox" name="pref[]" value="Computer games"> Computer games</label><br>
+			<label><input type="checkbox" name="pref[]" value="Internet/Computers"> Internet/Computers</label><br>
+			<label><input type="checkbox" name="pref[]" value="Music"> Music</label><br>
+			<label><input type="checkbox" name="pref[]" value="Photography"> Photography</label><br>
+			<label><input type="checkbox" name="pref[]" value="Sports/Fitness"> Sports/Fitness</label>
+			</span>
+			<p><input type="submit"></p>
+</fieldset>
+	
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>Form Validation with JavaScript - 1. Restricting input to alphanumeric characters</title>
+	<!-- inputfield, must: a) not be empty; and b) contain only alphanumeric characters and spaces; only if both tests are passed the form will be submitted (when the script returns a value of true). -->
+	<script language="JavaScript">
+		function checkForm(form)
+		  {
+		    // validation fails if the input is blank
+		    if(form.inputfield.value == "") {
+		      alert("Error: Input is empty!");
+		      form.inputfield.focus();
+		      return false;
+		    }
+		
+		    // regular expression to match only alphanumeric characters and spaces
+		    var re = /^[\w ]+$/; // \w represents any alphanumeric character or the '_'
+		    	// ^[\w ]+$ will fail if the input is empty as it requires at least one character 
+		
+		    // validation fails if the input doesn't match our regular expression
+		    if(!re.test(form.inputfield.value)) {
+		      alert("Error: Input contains invalid characters!");
+		      form.inputfield.focus();
+		      return false;
+		    }
+		
+		    // validation was successful
+		    return true;
+		  }
+	</script>
+</head>
+
+<body>
+	<!-- the purpose of a form validation script is to return a boolean value (true or false) to the onsubmit event handler. A value of true means that form will be submitted while a false value will block the form from being submitting; when a return command is encountered, execution of the function is halted; if the first condition fails, the second condition will not be tested; only when all conditions have been satisfied do we reach the return true command, in which case the form will be submitted. -->
+	<form method="POST" action="#" onsubmit="return checkForm(this);">
+	<p>Input: <input type="text" size="32" name="inputfield">
+	<input type="submit"></p>
+	</form>
+</body>
+
+</html>

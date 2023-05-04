@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<style>
+		/* body {
+			margin:0;
+			padding:0;
+		} */
+	</style>
+
+<head>
+	<title>JavaScript onMouseOver Demonstration</title>
+	<script type="text/javascript">
+		function onElementHover (event) {
+			var element = document.getElementById('my_span');
+			element.style.backgroundColor = "#C0C0FF";
+			element.innerHTML = "Mouse X: " + (event.pageX || event.clientX) + 
+				"; Mouse Y: " + (event.pageY || event.clientY);
+				// event.screenX, event.screenY - global (screen) coordinates ???
+		}
+		
+		function onElementUnhover (event) {
+			var element = document.getElementById('my_span');
+			element.style.backgroundColor = "";
+			element.innerHTML = "Place your mouse over here again";
+		}
+	</script>
+</head>
+
+<body>
+	<!-- event for real time position of the mouse ??? -->
+	<span id="my_span" onmouseover="onElementHover(event)" onmouseout="onElementUnhover(event)">Place your mouse over here</span>
+</body>
+
+</html>

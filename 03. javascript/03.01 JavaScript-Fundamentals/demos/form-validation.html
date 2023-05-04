@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>Form Validation with JavaScript - Example</title>
+	<script language="JavaScript">
+		function checkForm() {
+			var errorMessages = "";
+			var valid = true;
+			if (document.mainForm.firstName.value == "") {
+				document.getElementById("firstNameError").style.display = "inline";
+				errorMessages += "Please type in your first name!<br/>";
+				valid = false;
+			} else {
+				document.getElementById("firstNameError").style.display = "none";
+			}
+			
+			if (document.mainForm.lastName.value == "") {
+				document.getElementById("lastNameError").style.display = "inline";
+				errorMessages += "Please type in your last name!<br/>";
+				valid = false;
+			} else {
+				document.getElementById("lastNameError").style.display = "none";
+			}
+			
+			if (document.mainForm.email.value == "") {
+				document.getElementById("emailError").style.display = "inline";
+				errorMessages += "Please type in your e-mail!<br/>";
+				valid = false;
+			} else {
+				document.getElementById("emailError").style.display = "none";
+			}
+			
+			if (document.mainForm.gender.value == "") {
+				document.getElementById("genderError").style.display = "inline";
+				errorMessages += "Please select your gender!<br/>";
+				valid = false;
+			} else {
+				document.getElementById("genderError").style.display = "none";
+			}
+			
+			if (valid) {
+				document.getElementById("errorMessages").style.display = "none";
+			} else {			
+				document.getElementById("errorMessages").style.display = "inline";
+				document.getElementById("errorMessages").innerHTML = errorMessages;
+			}			
+			return valid;
+		}
+	</script>
+</head>
+
+<body>
+	<form name="mainForm" action="" method="post" onsubmit="return checkForm()">
+		First name: <input type="text" name="firstName" />
+		<span id="firstNameError" style="color:red; display:none">* invalid!</span>
+		<br />
+		Last name: <input type="text" name="lastName" />
+		<span id="lastNameError" style="color:red; display:none">* invalid!</span>
+		<br />
+		E-mail: <input type="text" name="email" />
+		<span id="emailError" style="color:red; display:none">* invalid!</span>
+		<br />
+		Gender: <select name=gender>
+			<option></option>
+			<option>Male</option>
+			<option>Female</option>
+		</select>
+		<span id="genderError" style="color:red; display:none">* invalid!</span>
+		<br />
+		<div id="errorMessages" style="color:red; display:none"></div><br />
+		<input type="submit" value="Check Form and Submit">
+  </form>
+</body>
+
+</html>
