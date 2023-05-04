@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Loops - for-in loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+
+		var obj = {
+			firstName: 'Doncho',
+			lastName: 'Minkov',
+			age: 23,
+			fullName: function () {
+				return this.firstName + " " + this.lastName
+			},
+			toString: function () {
+				return 'Name: ' + this.fullName() + '\nAge: ' + this.age
+			}
+		};
+
+		document.writeln(obj);
+
+		for(index in obj) { console.log(obj[index]); }
+		console.log(obj.fullName());
+		console.log(obj.toString());
+
+	</script>
+</body>
+</html>

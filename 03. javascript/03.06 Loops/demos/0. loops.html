@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>Loops - Example</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var number = prompt("Enter number", 10);
+		document.write("Using for-loop: ");
+		for (i=0; i<number; i++)
+		{
+			document.write(i + " ");
+		}
+		
+		document.write("<br/>");
+		document.write("Using while loop: ");
+		i = 0;
+		while(i < number)
+		{
+			document.write(i + " ");
+			i++;
+		}
+		
+		document.write("<br/>");
+		document.write("Using do...while loop: ");
+		i = 0;
+		do
+		{
+			document.write(i + " ");
+			i++;
+		}
+		while (i < number);
+		
+		document.write("<br/>");
+		document.write("Using for..in (foreach) loop: ");
+		var langs = ["C#", "Java", "PHP"];
+		for (var langIndex in langs)
+		{
+			document.write(langs[langIndex] + " ");
+		}
+	</script>
+
+	<script>
+	
+		var nStr = '123',
+		n = +nStr,
+		number = 1,
+		sum = 1,
+		result = 'The sum 1';
+		while (number < n) {
+			number += 1;
+			sum += number ;
+			result += '+' + number;
+		}
+		result += ' = ' + sum;
+		console.log(result);
+
+	</script>
+
+	<script>
+	
+	var numberStr = '123';
+	var number = +numberStr;
+	var divider = 2;
+	var maxDivider = Math.sqrt(number);
+	var prime = true;
+	while (prime && (divider <= maxDivider)) {
+	if (!(number % divider)) {
+		prime = false;        
+	}
+	divider++;
+	}
+	console.log(prime);
+
+	</script>
+
+	<script>
+	
+	var numberStr = '123',
+    n = +numberStr,
+    fact = 1,
+    factStr = 'n! = ';
+	while (1) { //infinite loop
+	if (n === 1) {
+		break;
+	}
+	factStr += n + '*'
+	fact *= n;
+	n -= 1;
+	}	
+	factStr += '1 = ' + fact;
+	console.log(factStr);
+	
+	</script>
+
+
+
+</body>
+
+</html>
