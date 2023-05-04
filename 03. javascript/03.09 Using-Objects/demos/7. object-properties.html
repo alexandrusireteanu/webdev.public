@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+	<script src="scripts/js-console.js">	
+	</script>
+	<script>
+		jsConsole.writeLine('Using the dot-notation');
+		jsConsole['writeLine']('Using the brackets');
+		
+		// Associative arrays
+		function countWords(words) {
+		  var word, i,
+		      wordsCount = {};       
+		  for (i in words) {
+		    word = words[i].toLowerCase();
+		    if (!wordsCount[word]) { wordsCount[word] = 0; }
+		    wordsCount[word] += 1;
+		  }
+		  return wordsCount
+		}
+		console.log(countWords('aabbff'));
+	</script>
+</body>
+</html>
