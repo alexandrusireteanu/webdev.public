@@ -1,0 +1,1 @@
+﻿SELECT EMPLOYEE_ID, first_name, last_name, salary FROM EMPLOYEES

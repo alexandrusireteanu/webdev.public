@@ -1,0 +1,3 @@
+﻿SELECT first_name, last_name, salary
+FROM EMPLOYEES
+WHERE salary < 2300

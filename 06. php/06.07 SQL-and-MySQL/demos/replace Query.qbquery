@@ -1,0 +1,19 @@
+﻿replace into countries
+values ('BG', 'BULGAR', 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
